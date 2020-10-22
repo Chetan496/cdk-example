@@ -9,6 +9,9 @@ public class CdkExampleApp {
         App app = new App();
 
         new CdkExampleStack(app, "CdkExampleStack");
+        new S3BucketStack(app, "CdkBucketStack");
+        new ExistingTemplateStack(app, "ExistingTemplateStack");
+        
 
         app.synth();
     }
