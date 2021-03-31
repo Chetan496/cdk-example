@@ -32,6 +32,7 @@ public class CdkExampleStack extends Stack {
 				SubnetConfiguration.builder().cidrMask(24).name("Subnet01").subnetType(SubnetType.PRIVATE).build(),
 				SubnetConfiguration.builder().cidrMask(24).name("Subnet02").subnetType(SubnetType.PRIVATE).build(),
 				SubnetConfiguration.builder().cidrMask(24).name("Subnet03").subnetType(SubnetType.PUBLIC).build());
+		
 
 		Vpc vpc = Vpc.Builder.create(this, "newdevvpc").cidr("10.0.0.0/16").subnetConfiguration(subnetConfiguration)
 				.build();
